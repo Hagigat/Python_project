@@ -3,6 +3,8 @@ import random
 from telebot import types
 import requests
 print("salam")
+
+print("sdasdas")
 bot = telebot.TeleBot("6203741928:AAEQ9FykRyvZyEdJBAAnml8JAwXZfkVV4Mg")
 
 @bot.message_handler(commands=['start'])
