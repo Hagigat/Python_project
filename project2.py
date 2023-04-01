@@ -1,6 +1,7 @@
 import telebot
 import random
 from telebot import types
+import requests
 
 bot = telebot.TeleBot("6203741928:AAEQ9FykRyvZyEdJBAAnml8JAwXZfkVV4Mg")
 
@@ -69,13 +70,12 @@ def payment_bot():
             bot.send_message(message.from_user.id,'Payment failed. Please try again.')
         
         # ask if user wants to make another payment
-        again = input("Do you want to make another payment? (Y/N): ")
-        if again.lower() != "y":
-            break
+    again = input("Do you want to make another payment? (Y/N): ")
+    if again.lower() != "y": break
     bot.send_message(message.from_user.id,'Thank you for your payment,goodbye!')
    
     
-        
+    
     if message.text == 'bank':
         bot.send_message(message.from_user.id,'Okay,remember that you should pay the full payment before the next billing.Thank you for using our application,goodbye!',reply_markup=markup)
     
